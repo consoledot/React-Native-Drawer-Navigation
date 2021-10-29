@@ -1,13 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
-import Header from "../Header/Header";
 
-export default function Home({ navigation }) {
+export default function About({ navigation }) {
   return (
     <View style={styles.container}>
-      {/* <Header navigation={navigation} title="Home" /> */}
       <View style={styles.content}>
-        <Text style={styles.text}>Home is here</Text>
+        <Text style={styles.text}>About Page</Text>
+        <Button title="Go Home" onPress={() => navigation.navigate("Home")} />
       </View>
     </View>
   );
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#03cafc",
+    backgroundColor: "#c203fc",
   },
   text: {
     fontSize: 20,
